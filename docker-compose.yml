@@ -8,8 +8,12 @@ identidoc:
     - ./app:/app
   links:
     - dnmonster
+    - redis
 
 dnmonster:
   image: amouat/dnmonster:latest
   ports:
     - "8181:8080"
+
+redis:
+  image: redis:5.0
